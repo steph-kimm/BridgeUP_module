@@ -6,3 +6,9 @@
 import pandas as pd
 
 df = pd.read_csv("internship_bootcamp_data.csv")
+
+def student_season(student_name):
+	season = df["Fav season"].loc[df["First Name"]== student_name]
+	return season
+
+print(student_season("Stephanie"))
